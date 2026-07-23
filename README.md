@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Aroma Cafe - Online Presence Website
 
 A modern, responsive, and production-ready cafe website built with React, Vite, Tailwind CSS, and Firebase.
@@ -78,3 +79,7 @@ The project includes a multi-stage `Dockerfile` and an `nginx.conf` file:
 ## Mock Data Mode
 
 If you run the application without setting up the `.env` variables for Firebase, the application will automatically fall back to a "Mock Data Mode". Form submissions will be logged to the console, and the Admin Dashboard will display hardcoded sample data. This is useful for previewing the UI without setting up a backend.
+=======
+# cafebranding
+It is a fully functonal website about a cafe branding.
+>>>>>>> 9af89a8b9d20f8dd36fe824566edb2d27820272d

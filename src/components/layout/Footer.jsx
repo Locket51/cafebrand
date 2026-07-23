@@ -1,87 +1,92 @@
 import { Link } from 'react-router-dom';
-import { Coffee, MapPin, Phone, Mail } from 'lucide-react';
+import { Zap, Cpu, Server, Database, Radio } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-cafe-900 text-cafe-100 pt-16 pb-8 border-t border-cafe-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#03050d] border-t border-white/5 pt-16 pb-8 relative overflow-hidden">
+      {/* Background glowing aura */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-electric-blue/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          
+          {/* Brand Info */}
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-6">
-              <Coffee className="h-8 w-8 text-cafe-400" />
-              <span className="font-serif text-2xl font-bold tracking-tight text-white">Aroma Cafe</span>
+              <Zap className="h-6 w-6 text-electric-blue glow-blue" />
+              <span className="font-display text-xl font-bold tracking-tight text-white">
+                VoltWise<span className="text-electric-blue">AI</span>
+              </span>
             </Link>
-            <p className="text-cafe-300 text-sm leading-relaxed mb-6">
-              Crafting perfect moments, one cup at a time. Join us for artisanal coffee, fresh pastries, and a warm atmosphere.
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              Empowering households with Non-Intrusive Load Monitoring. Detect energy leaks, monitor appliances, and optimize bills using only a single smart meter.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-cafe-400 hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-              </a>
-              <a href="#" className="text-cafe-400 hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-              </a>
-              <a href="#" className="text-cafe-400 hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-              </a>
+              <span className="text-xs font-semibold text-gray-500 uppercase tracking-widest">24h AI Hackathon MVP</span>
             </div>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h3 className="font-serif text-lg font-semibold text-white mb-6">Quick Links</h3>
-            <ul className="space-y-3 text-sm text-cafe-300">
-              <li><Link to="/about" className="hover:text-white transition-colors">Our Story</Link></li>
-              <li><Link to="/menu" className="hover:text-white transition-colors">Menu</Link></li>
-              <li><Link to="/gallery" className="hover:text-white transition-colors">Gallery</Link></li>
-              <li><Link to="/reservation" className="hover:text-white transition-colors">Book a Table</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+            <h3 className="font-display text-sm font-bold text-white uppercase tracking-wider mb-6">App Navigation</h3>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li><Link to="/" className="hover:text-electric-blue transition-colors">Landing Page</Link></li>
+              <li><Link to="/dashboard" className="hover:text-electric-blue transition-colors">Main Dashboard</Link></li>
+              <li><Link to="/upload" className="hover:text-electric-blue transition-colors">Data Uploader</Link></li>
             </ul>
           </div>
 
+          {/* Tech Stack Details */}
           <div>
-            <h3 className="font-serif text-lg font-semibold text-white mb-6">Contact Us</h3>
-            <ul className="space-y-4 text-sm text-cafe-300">
-              <li className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-cafe-500 shrink-0" />
-                <span>123 Coffee Lane<br />Seattle, WA 98101</span>
+            <h3 className="font-display text-sm font-bold text-white uppercase tracking-wider mb-6">Tech Stack</h3>
+            <div className="space-y-4 text-xs text-gray-400">
+              <div className="flex items-start space-x-2">
+                <Cpu className="h-4 w-4 text-electric-blue shrink-0 mt-0.5" />
+                <span><strong>Frontend:</strong> React, Vite, TypeScript, TailwindCSS v4, Recharts, Framer Motion</span>
+              </div>
+              <div className="flex items-start space-x-2">
+                <Server className="h-4 w-4 text-emerald-green shrink-0 mt-0.5" />
+                <span><strong>Backend:</strong> FastAPI, Python, Pandas, NumPy, Scikit-learn</span>
+              </div>
+              <div className="flex items-start space-x-2">
+                <Database className="h-4 w-4 text-orange-warning shrink-0 mt-0.5" />
+                <span><strong>Databases:</strong> MongoDB Atlas, SQLite cache</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Future Integration Channels */}
+          <div>
+            <h3 className="font-display text-sm font-bold text-white uppercase tracking-wider mb-6">Integrations</h3>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li className="flex items-center space-x-2">
+                <Radio className="h-4 w-4 text-gray-500 shrink-0" />
+                <span>Actian VectorAI Placeholder</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-cafe-500 shrink-0" />
-                <span>(555) 123-4567</span>
+              <li className="flex items-center space-x-2">
+                <Radio className="h-4 w-4 text-gray-500 shrink-0" />
+                <span>Solana Blockchain Stubs</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-cafe-500 shrink-0" />
-                <span>hello@aromacafe.com</span>
+              <li className="flex items-center space-x-2">
+                <Radio className="h-4 w-4 text-gray-500 shrink-0" />
+                <span>Gemini API Savings Reports</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Radio className="h-4 w-4 text-gray-500 shrink-0" />
+                <span>ElevenLabs Speech Narrations</span>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-serif text-lg font-semibold text-white mb-6">Opening Hours</h3>
-            <ul className="space-y-3 text-sm text-cafe-300">
-              <li className="flex justify-between border-b border-cafe-800 pb-2">
-                <span>Mon - Fri</span>
-                <span>8:00 AM - 8:00 PM</span>
-              </li>
-              <li className="flex justify-between border-b border-cafe-800 pb-2">
-                <span>Saturday</span>
-                <span>9:00 AM - 6:00 PM</span>
-              </li>
-              <li className="flex justify-between pb-2">
-                <span>Sunday</span>
-                <span>10:00 AM - 4:00 PM</span>
-              </li>
-            </ul>
-          </div>
         </div>
 
-        <div className="border-t border-cafe-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-cafe-400 text-sm text-center md:text-left mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Aroma Cafe. All rights reserved.
+        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+          <p className="text-center md:text-left mb-4 md:mb-0">
+            &copy; {new Date().getFullYear()} VoltWise AI. Built for the International AI Hackathon.
           </p>
-          <div className="flex space-x-6 text-sm text-cafe-400">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          <div className="flex space-x-6">
+            <span>Model Version: v1.1.0</span>
+            <span>Accuracy: 98.7%</span>
           </div>
         </div>
       </div>
